@@ -9,7 +9,7 @@ public class ParolaAliena {
 	private TreeMap<String,String> mappaTraduzioni = new TreeMap<String,String>();
 	
 	public ParolaAliena(String parolaAliena, String traduzione) {
-		parola = parolaAliena;
+		setParola(parolaAliena);
 		mappaTraduzioni.put(traduzione,traduzione);
 	}
 
@@ -20,6 +20,14 @@ public class ParolaAliena {
 
 	public LinkedList<String> getTraduzioni() {
 		return new LinkedList<String>(mappaTraduzioni.keySet());
+	}
+
+	public String getParola() {
+		return parola;
+	}
+
+	public void setParola(String parola) {
+		this.parola = parola;
 	}
 
 }
